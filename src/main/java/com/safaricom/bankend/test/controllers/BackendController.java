@@ -68,7 +68,7 @@ public class BackendController {
     }
 
     @GetMapping("branches/{id}")
-    public ResponseEntity<List<BranchRegistrationResponseDTO>> getAllBranches(@RequestParam("bank_id") Long id) {
+    public ResponseEntity<List<BranchRegistrationResponseDTO>> getAllBranches(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(branchService.getAllBankBranchesById(id));
     }
 }
